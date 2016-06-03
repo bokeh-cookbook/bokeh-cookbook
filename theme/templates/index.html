@@ -62,27 +62,6 @@
       {% endfor %}
 
 
-  <br>
-
-     <section class="home-section">
-        <h3 class="home-header">Talks and Tutorials</h3>
-            <div class="row">
-                <ul>
-              {% for page in pages %}
-                  {% if page.title == 'Talks' %}
-                      {% for children_page in page.children[-3:] %}
-                          <li><p class="talk-header"><a href="{{ SITEURL }}/{{ children_page.url }}">{{ children_page.title }}</a>
-                          <br><b>{{children_page.conference}}</b>, {{children_page.speaker}}</p>    </li>
-                      {% endfor %}
-                  {% endif %}
-              {% endfor %}
-                </ul>
-            </div>
-            <div class="row">
-                <a class="button button-primary button-more" href="{{ SITEURL }}/pages/talks">More</a>
-            </div>
-    </section>
-
 </div>
 
 {% endblock content %}

@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Sarah Bird'
 SITENAME = u'Bokeh Cookbook'
-SITEURL = 'http://bokeh-cookbook.github.io/'
+SITEURL = 'http://bokeh-cookbook.github.io'
 TITLE = 'Bokeh Cookbook'
 SUBTITLE = 'Recipes, tips & tricks for using & developing bokeh'
 
@@ -26,7 +26,7 @@ FEED_RSS = 'feeds/all.rss.xml'
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["page_hierarchy", "ipynb"]
+PLUGINS = ["page_hierarchy", "ipynb.markup"]
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/{slug}.html'

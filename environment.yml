@@ -2,6 +2,7 @@ name: bokeh-cookbook
 dependencies:
   - python
   - jupyter
+  - beautifulsoup4
   - pip:
     - pelican
     - Markdown
