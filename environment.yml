@@ -1,0 +1,7 @@
+name: bokeh-cookbook
+dependencies:
+  - python
+  - jupyter
+  - pip:
+    - pelican
+    - Markdown

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <section id="content">
+        <header  class="header">
+            <h2 class="blogpost-title">Articles in {{ SITENAME }}</h2>
+        </header>
+        <dl>
+        	{% for article in articles %}
+                	<dt>{{ article.date.strftime('%d.%m.%Y') }}</dt>
+                	<dd><a href='{{ article.url }}'>{{ article.title }}</a></dd>
+            {% endfor %}
+        </dl>
+    </section>
+</div>
+{% endblock %}
