@@ -1,0 +1,19 @@
+branches:
+  only:
+  - master
+
+language: python
+
+python:
+  - 3.4
+
+install:
+  - pip install -r requirements.txt --use-mirrors
+
+script:
+  - make html
+
+notifications:
+  email: false
+
+after_success: ./deploy.sh
