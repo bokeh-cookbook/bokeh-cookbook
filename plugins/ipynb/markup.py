@@ -73,8 +73,8 @@ class IPythonNB(BaseReader):
             if not os.path.exists(md_filepath):
                 raise Exception("Could not find metadata in `.ipynb-meta`, inside `.ipynb` or external `.md` file.")
             else:
-                raise Exception("Could not find metadata in `.ipynb-meta` or inside `.ipynb` but found `.md` file, "
-                      "assuming that this notebook is for liquid tag usage if true ignore this error")
+                raise Exception("""Could not find metadata in `.ipynb-meta` or inside `.ipynb` but found `.md` file,
+                                assuming that this notebook is for liquid tag usage if true ignore this error""")
 
         content, info = get_html_from_filepath(filepath)
 
@@ -82,14 +82,10 @@ class IPythonNB(BaseReader):
         if 'summary' not in [key.lower() for key in self.settings.keys()]:
             content = '<body>%s</body>' % content
             parser = MyHTMLParser(self.settings, filename)
-            if hasattr(content, 'decode'): # PY2
-                content = content.decode("utf-8")
             parser.feed(content)
             parser.close()
             content = parser.body
-            if ('IPYNB_USE_META_SUMMARY' in self.settings.keys() and \
-              self.settings['IPYNB_USE_META_SUMMARY'] == False) or \
-              'IPYNB_USE_META_SUMMARY' not in self.settings.keys():
+            if ('IPYNB_USE_META_SUMMARY' in self.settings.keys() and self.settings['IPYNB_USE_META_SUMMARY'] is False) or 'IPYNB_USE_META_SUMMARY' not in self.settings.keys():
                 metadata['summary'] = parser.summary
 
         content = fix_css(content, info)
