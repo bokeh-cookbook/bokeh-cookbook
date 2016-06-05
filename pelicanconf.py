@@ -27,6 +27,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["page_hierarchy", "ipynb.markup"]
+IGNORE_FILES = ['.ipynb_checkpoints']
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/{slug}.html'
