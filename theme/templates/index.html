@@ -11,12 +11,8 @@
         <div class="row">
           <ul>
           {% for page in pages %}
-              {% if page.title == 'Projects' %}
-                  {% for children_page in page.children %}
-                        {% if children_page.project == 'core' %}
-                        <li class="talk-header"><a href="{{ children_page.docs }}">{{ children_page.title }}</a>: {{children_page.subtitle}}</li>
-                        {% endif %}
-                {% endfor %}
+              {% if page.title == 'Overview' %}
+                  {{ page.content }}
               {% endif %}
           {% endfor %}
           </ul>
