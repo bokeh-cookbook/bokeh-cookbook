@@ -1,5 +1,7 @@
 # Project specific
 output/
+*.swp
+*.pid
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
