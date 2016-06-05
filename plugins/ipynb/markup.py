@@ -80,8 +80,12 @@ class IPythonNB(BaseReader):
 
         # Generate Summary: Do it before cleaning CSS
         if 'summary' not in [key.lower() for key in self.settings.keys()]:
-            content = '<body>%s</body>' % content
             parser = MyHTMLParser(self.settings, filename)
+            if hasattr(content, 'decode'): # PY2
+                content = '<body>%s</body>' % content.encode('utf-8')
+                content = content.decode("utf-8")
+            else:
+                content = '<body>%s</body>' % content
             parser.feed(content)
             parser.close()
             content = parser.body
