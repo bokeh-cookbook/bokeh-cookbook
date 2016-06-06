@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="container">
     <section class="site-header">
       <div><h2 class="title">{{ TITLE }}</h2></div>
     </section>
@@ -20,7 +18,7 @@
     </section>
 
     <section class="home-section">
-      <h3 class="home-header">Recent blog posts</h3>
+      <h3 class="home-header">Recent posts</h3>
       {% for article in articles_page.object_list %}
       <article class="home-post">
         <header>
@@ -38,7 +36,7 @@
           {{ article.summary }}
 
           <div>
-            <a class="button button-primary button-read" href="{{ SITEURL }}/{{ article.url }}">Read</a>
+            <a class="button button-default button-read" href="{{ SITEURL }}/{{ article.url }}">Read</a>
           </div>
 
         </div>
@@ -56,8 +54,4 @@
       </article>
       <div class="separator"></div>
       {% endfor %}
-
-
-</div>
-
 {% endblock content %}

@@ -1,10 +1,13 @@
 Title: Examples
+Author: Sarah Bird
 
 This page provides a download of the bokeh examples for different versions of bokeh.
 
-Find your version of bokeh by running 
+Find your version of bokeh by running:
 
-    $ python -c "import bokeh; print(bokeh.__version__)"
+```sh
+$ python -c "import bokeh; print(bokeh.__version__)"
+```
 
 ### Downloads
 

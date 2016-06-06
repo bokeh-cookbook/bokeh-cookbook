@@ -44,6 +44,7 @@
         <ul class="navbar-list">
           <li class="navbar-item"><a class="navbar-link" href="{{ SITEURL }}">Home</a></li>
           <li class="navbar-item"><a class="navbar-link" href="{{ SITEURL }}/archives">Archive</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="{{ SITEURL }}/tags">Tags</a></li>
           <li class="navbar-item"><a class="navbar-link" href="{{ SITEURL }}/pages/examples">Examples</a></li>
         </ul>
       </div>
@@ -51,8 +52,12 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-{% block content %}
-{% endblock content %}
+  <div class="container">
+    <section id="content">
+      {% block content %}
+      {% endblock content %}
+    </section>
+  </div>
 
 <br>
 
