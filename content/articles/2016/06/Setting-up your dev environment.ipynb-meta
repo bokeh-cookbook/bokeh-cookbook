@@ -4,4 +4,3 @@ Date: 2016-06-05
 Category: Dev
 Tags: dev
 Author: Sarah Bird
-Summary: At the Pycon 2016 sprints, there were a bunch of folks who wanted to sprint on Bokeh and so needed to setup a development environment. This turned out to not be as well documented as we hoped.
